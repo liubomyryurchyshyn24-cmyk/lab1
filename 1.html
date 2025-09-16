@@ -1,0 +1,61 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Лабораторна робота 1</title>
+<script language="JavaScript">
+// 2
+function calculation() {
+    let x = 2;
+    let y = 4;
+    let z = 3;
+    let result = (x + y**2 + z**0.5);
+    alert("Результат обчислення: " + result);
+}
+
+// Завдання 3
+function fun(a) {
+    main_form.t_res.value = a;
+}
+function fun1(a) {
+    main_form.t_res2.value = a;
+}
+</script>
+</head>
+<body>
+
+<!--1-->
+<h3>Завдання 1</h3>
+<p>Це звичайний HTML абзац.</p>
+<script language="JavaScript">
+document.write("Привіт! Мене звати Юрчишин Любомир Володимирович, студент групи ІПЗ-24");
+</script>
+<p>Знову звичайний HTML абзац.</p>
+<form>
+    <input type="button" value="Натисни мене" 
+           onClick="alert('Я народився 02.09.2007 року в селі Ясень ')">
+</form>
+<hr>
+
+<!--2-->
+<h3>Завдання 2</h3>
+<form>
+    <input type="button" value="Calculate" onClick="calculation()">
+</form>
+<hr>
+
+<!--3-->
+<h3>Завдання 3</h3>
+<form name="main_form" id="main_form">
+    
+    <input type="text" size="100" value="onFocus" 
+           onFocus="fun('Поле активоване (onFocus)');"><br><br>
+    <input type="text" size="100" id="t_res" placeholder="Повідомлення для onFocus"><br><br>
+
+    
+    <input type="text" size="100" value="onChange" 
+           onChange="fun1('Зміст текстового поля змінено (onChange)');"><br><br>
+    <input type="text" size="100" id="t_res2" placeholder="Повідомлення для onChange">
+</form>
+
+</body>
+</html>
